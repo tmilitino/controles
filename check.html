@@ -12,6 +12,7 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
         </div>
     </div>
     <div class="form-group col-md-2"></div>
-    <form>
+    <form id="teste">
         <div class="form-row container-fluid">
             <div class="form-row col-md-6">
 
@@ -90,6 +91,33 @@
             <button type="submit" class="btn btn-primary">Registrar</button>
         </div>
     </form>
+
+<div>
+    <h1 id="bloc">EMPRESA BLOQUEADA</h1>
+</div>
+
+<script type="text/javascript">
+
+
+var cChecked = function() {
+if ($('#customControlInline').is(":checked"))
+{
+  $("#teste").hide();
+  $("#bloc").show();
+}else{
+
+    $("#teste").show();
+     $("#bloc").hide();
+}
+
+return ($('#customControlInline').is(":checked") ?  $("#teste").hide() : $("#teste").show());
+};
+cChecked();
+$("input[type=checkbox]").on( "click", cChecked);
+
+
+
+</script>
 
 </body>
 
