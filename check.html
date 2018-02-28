@@ -14,9 +14,11 @@
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/plentz/jquery-maskmoney/master/dist/jquery.maskMoney.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </head>
 
-<body>
+<body style="font-family: 'Dosis', sans-serif;">
     <div class="form-row container-fluid">
         <div class="form-row col-md-10">
             <h1> Bernhoeft Contadores</h1>
@@ -89,7 +91,7 @@
             </div>
         </div>
 
-        <div id="sA" class="form-group col-md-8 offset-md-4">
+        <div id="sA" class="form-group col-md-8 offset-md-5">
             <label for="inputSA">S/A</label>
         </div>
         <div class="form-inline">
@@ -118,22 +120,50 @@
                 </div>
             </div>
             <div class="form-group col-md-4">
-                <div class="form-group col-md-8">
-                    <label for="inlineLucro">Lucro do exerc</label>
+                <div class="form-group col-md-9">
+                    <label for="inlineLucro">Lucro do Exercicio</label>
                 </div>
                 <div class="input-group mb-1 mr-sm-1">
                     <div class="input-group-prepend">
                         <div class="input-group-text">R$</div>
                     </div>
-                    <input type="text" class="form-control col-md-8" id="inlineLucro" placeholder="Lucro do exerc">
+                    <input type="text" class="form-control col-md-8" id="inlineLucro" placeholder="Lucro do Exercicio">
                     <span id="errmsg3"></span>
                 </div>
             </div>
         </div>
         </div>
-
-        <div class="form-group col-md-2 offset-md-3"></div>
-        <div class="container col-md-2 offset-md-5 ">
+        <br>
+        <div class="form-inline offset-md-2">
+            <div class="form-group col-md-4">
+                <div class="form-group col-md-8">
+                    <label for="inlineAcionistas">Acionistas</label>
+                </div>
+                <div class="input-group mb-1 mr-sm-1">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text ">
+                            <i class="material-icons">&#xe7fd;</i>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control col-md-8" id="inlineAcionistas" placeholder="Acionistas">
+                    <span id="errmsg1"></span>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <div class="form-group col-md-10">
+                    <label for="inlinePL">Patrimonio Liquido</label>
+                </div>
+                <div class="input-group mb-1 mr-sm-1">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">R$</div>
+                    </div>
+                    <input type="text" class="form-control col-md-8" id="inlinePL" placeholder="Patrimonio Liquido">
+                    <span id="errmsg2"></span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container col-md-3">
             <button type="submit" class="btn btn-primary">Registrar</button>
         </div>
     </form>
@@ -141,9 +171,6 @@
     <div>
         <h1 id="bloc">EMPRESA BLOQUEADA</h1>
     </div>
-
-
-
     <script src="jvScript.js"></script>
 </body>
 
