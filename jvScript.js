@@ -16,13 +16,13 @@ $("input[type=checkbox]").on("click", cChecked);
 $("#res").hide();
 $("#com").hide();
 
-$('#inlineFormInputGroupReceitaBruta').change(function () {
-    var r = parserInt($('#inlineFormInputGroupReceitaBruta').val());
-    console.log(r>36);
+$('#inlineLucro').change(function () {
+    var r = $('#inlineLucro').maskMoney('unmasked')[0];
+    console.log(r);
 })
 
 $('#inlineFormInputGroupReceitaBruta').change(function () {
-    if ($('#inlineFormInputGroupReceitaBruta').val() > 36) {
+    if ($('#inlineFormInputGroupReceitaBruta').maskMoney('unmasked')[0] > 36) {
         $("#res").hide();
         $("#com").show();
     } else {
@@ -33,35 +33,35 @@ $('#inlineFormInputGroupReceitaBruta').change(function () {
 
 //mascara monetaria e block de caracteres
 
-$(document).ready(function(){
-     $("#inlineCaptalSocial").maskMoney({
-         decimal: ",",
-         thousands: "."
-     });
+$(document).ready(function () {
+    $("#inlineCaptalSocial").maskMoney({
+        decimal: ",",
+        thousands: "."
+    });
 });
 
-$(document).ready(function(){
-     $("#inlineReservalegal").maskMoney({
-         decimal: ",",
-         thousands: "."
-     });
+$(document).ready(function () {
+    $("#inlineReservalegal").maskMoney({
+        decimal: ",",
+        thousands: "."
+    });
 });
 
-$(document).ready(function(){
-     $("#inlineLucro").maskMoney({
-         decimal: ",",
-         thousands: "."
-     });
+$(document).ready(function () {
+    $("#inlineLucro").maskMoney({
+        decimal: ",",
+        thousands: "."
+    });
 });
 
-$(document).ready(function(){
-     $("#inlineFormInputGroupReceitaBruta").maskMoney({
-         decimal: ",",
-         thousands: "."
-     });
+$(document).ready(function () {
+    $("#inlineFormInputGroupReceitaBruta").maskMoney({
+        decimal: ",",
+        thousands: "."
+    });
 });
 
-$(document).ready(function(){
+$(document).ready(function () {
     $('#inlineAcionistas').keypress(function (e) {
         if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
             return false;
@@ -69,7 +69,7 @@ $(document).ready(function(){
     });
 });
 
-$(document).ready(function(){
+$(document).ready(function () {
     $("#inlinePL").maskMoney({
         decimal: ",",
         thousands: "."
