@@ -16,13 +16,43 @@ $("input[type=checkbox]").on("click", cChecked);
 $("#res").hide();
 $("#com").hide();
 
+
+
+//bloqueio para não digitar letras ou outros caracteres,
+
 $(document).ready(function () {
-    //called when key is pressed in textbox
     $('#inlineFormInputGroupReceitaBruta').keypress(function (e) {
-        //if the letter is not digit then display error and don't type anything
         if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-            //display error message
-            $("#errmsg").html("Só numeros").show().fadeOut("slow");
+            $("#errmsg0").html("Só numeros").show().fadeOut("slow");
+            return false;
+        }
+    });
+});
+
+
+$(document).ready(function () {
+    $('#inlineLucro').keypress(function (e) {
+        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+            $("#errmsg3").html("Só numeros").show().fadeOut("slow");
+            return false;
+        }
+    });
+});
+
+
+$(document).ready(function () {
+    $('#inlineReservalegal').keypress(function (e) {
+        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+            $("#errmsg2").html("Só numeros").show().fadeOut("slow");
+            return false;
+        }
+    });
+});
+
+$(document).ready(function () {
+    $('#inlineCaptalSocial').keypress(function (e) {
+        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+            $("#errmsg1").html("Só numeros").show().fadeOut("slow");
             return false;
         }
     });
@@ -37,4 +67,38 @@ $('#inlineFormInputGroupReceitaBruta').change(function () {
         $("#com").hide();
         $("#res").show();
     }
+});
+
+//mascara monetaria
+
+$(document).ready(function()
+{
+     $("#inlineCaptalSocial").maskMoney({
+         decimal: ",",
+         thousands: "."
+     });
+});
+
+$(document).ready(function()
+{
+     $("#inlineReservalegal").maskMoney({
+         decimal: ",",
+         thousands: "."
+     });
+});
+
+$(document).ready(function()
+{
+     $("#inlineLucro").maskMoney({
+         decimal: ",",
+         thousands: "."
+     });
+});
+
+$(document).ready(function()
+{
+     $("#inlineFormInputGroupReceitaBruta").maskMoney({
+         decimal: ",",
+         thousands: "."
+     });
 });
