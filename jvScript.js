@@ -31,6 +31,19 @@ $('#inlineFormInputGroupReceitaBruta').change(function () {
     }
 });
 
+
+$('#inlinePL').change(function () {
+    if ($('#inlinePL').maskMoney('unmasked')[0] > 1000000) {
+        alert("Publicar!");  
+    }
+});
+
+$('#inlineAcionistas').change(function () {
+    if ($('#inlineAcionistas').val() >= 20) {
+        alert("Publicar!");  
+    }
+});
+
 //mascara monetaria e block de caracteres
 
 $(document).ready(function () {
