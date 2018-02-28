@@ -29,32 +29,28 @@ $('#inlineFormInputGroupReceitaBruta').change(function () {
 
 //mascara monetaria e block de caracteres
 
-$(document).ready(function()
-{
+$(document).ready(function(){
      $("#inlineCaptalSocial").maskMoney({
          decimal: ",",
          thousands: "."
      });
 });
 
-$(document).ready(function()
-{
+$(document).ready(function(){
      $("#inlineReservalegal").maskMoney({
          decimal: ",",
          thousands: "."
      });
 });
 
-$(document).ready(function()
-{
+$(document).ready(function(){
      $("#inlineLucro").maskMoney({
          decimal: ",",
          thousands: "."
      });
 });
 
-$(document).ready(function()
-{
+$(document).ready(function(){
      $("#inlineFormInputGroupReceitaBruta").maskMoney({
          decimal: ",",
          thousands: "."
