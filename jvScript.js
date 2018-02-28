@@ -16,9 +16,13 @@ $("input[type=checkbox]").on("click", cChecked);
 $("#res").hide();
 $("#com").hide();
 
+$('#inlineFormInputGroupReceitaBruta').change(function () {
+    var r = parserInt($('#inlineFormInputGroupReceitaBruta').val());
+    console.log(r>36);
+})
 
 $('#inlineFormInputGroupReceitaBruta').change(function () {
-    if ($('#inlineFormInputGroupReceitaBruta').val() > 36000000) {
+    if ($('#inlineFormInputGroupReceitaBruta').val() > 36) {
         $("#res").hide();
         $("#com").show();
     } else {

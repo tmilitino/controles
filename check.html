@@ -32,10 +32,11 @@
     <div class="form-group col-md-2"></div>
     <form id="teste" class="col-md-8 offset-md-2" style="background-color:#dde7f0">
         <div class="form-row container-fluid">
-            <div class="form-row col-md-6">
-
-                <div class="form-row col-md-8 ">
+            <div class="form-row col-md-12">
+                <div class="form-row col-md-3 my-3">
                     <label for="inputTrave">Travamento do Radar</label>
+                </div>
+                <div class="form-group col-md-2 my-2">
                     <select id="inputTrave" class="form-control">
                         <option selected>N/a</option>
                         <option>Sim</option>
@@ -47,22 +48,23 @@
         <div class="form-group col-md-2"></div>
         <div class="form-row container-fluid">
             <div class="form-row">
-                <div class="form-group col-md-4 offset-md-4">
+                <div class="form-group col-md-6 offset-md-6">
                     <label for="inputDistri">Distribuições de Lucros</label>
                 </div>
                 <div class="form-row col-md-12">
-                    <div class="form-row col-md-2"></div>
-                    <div class="form-row col-md-5">
+                    <div class="form-group col-md-7">
                         <label for="inputInfoRend">Informe de Rendimentos</label>
-                        <select id="inputInfoRend" class="form-control">
-                            <option selected>N/a</option>
-                            <option>OK</option>
-                            <option>Diverge</option>
-                        </select>
+                        <div class="form-row col-md-7">
+                            <select id="inputInfoRend" class="form-control">
+                                <option selected>N/a</option>
+                                <option>OK</option>
+                                <option>Diverge</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-row col-md-1"></div>
-                    <div class="form-row col-md-3">
+                    <div class="form-group col-md-3">
                         <label for="inputDecore">Decore</label>
+                        <div class="form-row col-md-"></div>
                         <select id="inputDecore" class="form-control">
                             <option selected>N/a</option>
                             <option>OK</option>
@@ -83,11 +85,9 @@
                         <div class="input-group-text">R$</div>
                     </div>
                     <input type="text" class="form-control col-md-4" id="inlineFormInputGroupReceitaBruta" placeholder="Recita Bruta">
-                    <span id="errmsg0"></span>
+                    <span id="com" valeu="Completa">Completa</span>
+                    <span id="res" valeu="Resumida">Resumida</span>
                 </div>
-                <h5 id="com" valeu="Completa">Completa</h5>
-
-                <h5 id="res" valeu="Resumida">Resumida</h5>
             </div>
         </div>
 
