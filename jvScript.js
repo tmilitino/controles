@@ -17,48 +17,6 @@ $("#res").hide();
 $("#com").hide();
 
 
-
-//bloqueio para não digitar letras ou outros caracteres,
-
-$(document).ready(function () {
-    $('#inlineFormInputGroupReceitaBruta').keypress(function (e) {
-        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-            $("#errmsg0").html("Só numeros").show().fadeOut("slow");
-            return false;
-        }
-    });
-});
-
-
-$(document).ready(function () {
-    $('#inlineLucro').keypress(function (e) {
-        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-            $("#errmsg3").html("Só numeros").show().fadeOut("slow");
-            return false;
-        }
-    });
-});
-
-
-$(document).ready(function () {
-    $('#inlineReservalegal').keypress(function (e) {
-        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-            $("#errmsg2").html("Só numeros").show().fadeOut("slow");
-            return false;
-        }
-    });
-});
-
-$(document).ready(function () {
-    $('#inlineCaptalSocial').keypress(function (e) {
-        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-            $("#errmsg1").html("Só numeros").show().fadeOut("slow");
-            return false;
-        }
-    });
-});
-
-
 $('#inlineFormInputGroupReceitaBruta').change(function () {
     if ($('#inlineFormInputGroupReceitaBruta').val() > 36000000) {
         $("#res").hide();
@@ -69,7 +27,7 @@ $('#inlineFormInputGroupReceitaBruta').change(function () {
     }
 });
 
-//mascara monetaria
+//mascara monetaria e block de caracteres
 
 $(document).ready(function()
 {
