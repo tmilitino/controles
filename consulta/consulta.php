@@ -35,9 +35,9 @@ if(mysqli_num_rows($result) > 0)
  {
   $output .= '
    <tr>
-    <td>'.$row["cnpj"].'</td>
-    <td>'.$row["razao_social"].'</td>
-    <td>'.$row["tipo"].'</td>
+    <td onclick="display('.$row["cnpj"].');" >'.$row["cnpj"].'</td>
+    <td onclick="display('.$row["cnpj"].');" >'.$row["razao_social"].'</td>
+    <td onclick="display('.$row["cnpj"].');" >'.$row["tipo"].'</td>
    </tr>
   ';
  }
