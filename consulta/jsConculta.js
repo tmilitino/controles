@@ -23,16 +23,15 @@ $(document).ready(function () {
   });
 });
 
+var data1
+
 function display(cnp) {
-  window.location.assign("http://localhost:88/check/check.html");
-  function parser_data(cnp) {
-    $.ajax({
-      url: "ccheck/ccheck.php",
-      method: "POST",
-      data: { cnp: cnp },
-      success: function (data) {
-        $('#resultado').html(data);
-      }
-    });
-  }
+  $.ajax({
+    url: "check/ccheck.php",
+    method: "POST",
+    data: { cnp: cnp },
+    success: function (data) {
+      alert(data);
+    }
+  });
 }
