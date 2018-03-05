@@ -15,7 +15,7 @@ if(mysqli_num_rows($result) > 0)
 {
 while($row = mysqli_fetch_array($result))
   {
-   $output .= '<h1>'.$row["razao_social"].'</h1>';
+   $output =$row["cnpj"];
   }
   echo $output;
  }

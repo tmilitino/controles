@@ -31,7 +31,7 @@ function display(cnp) {
     method: "POST",
     data: { cnp: cnp },
     success: function (data) {
-      alert(data);
+      window.location = "http://localhost:88/check/check.html?cnpj="+data;
     }
   });
 }

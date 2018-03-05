@@ -89,7 +89,20 @@ $(document).ready(function () {
     });
 });
 
+var url_atual = window.location.href;
 
-    function parser (t) {
-        alert("qwe");
-    }
+urlCnpj(url_atual);
+ 
+
+    function urlCnpj(cnpj) {  
+        var loc = location.search.substring(1, location.search.length);   
+        var param_value = false;   
+        var params = loc.split("&");   
+        for (i=0; i<params.length;i++) {   
+            param_name = params[i].substring(0,params[i].indexOf('='));   
+            if (param_name == cnpj) {                                          
+                param_value = params[i].substring(params[i].indexOf('=')+1)   
+            }   
+        } 
+     alert(param_value)  
+  }
