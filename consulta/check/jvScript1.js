@@ -100,9 +100,18 @@ urlCnpj(url_atual);
         var params = loc.split("&");   
         for (i=0; i<params.length;i++) {   
             param_name = params[i].substring(0,params[i].indexOf('='));   
-            if (param_name == cnpj) {                                          
+            if (param_name == "cnpj") {                                          
                 param_value = params[i].substring(params[i].indexOf('=')+1)   
             }   
         } 
-     alert(param_value)  
-  }
+        rSocial(param_value)
+        function rSocial(pValue){
+        $.ajax({
+            url: "razao.php",
+            method: "POST",
+            data: { pValue: pValue },
+            success: function (data) {
+                $("#resultado").html(data);
+            }
+          });
+  }}
