@@ -15,6 +15,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
 
 </head>
 
@@ -23,22 +26,86 @@
     <br />
     <h2 align="center">EMPRESAS</h2>
     <br />
+    
+    <div class="form-inline">
+        <div class="form-group">
+          <div class="items col-md-3">
+            <div class="info-block block-info clearfix">
+              <div data-toggle="buttons" class="btn-group bizmoduleselect">
+                <label class="btn btn-outline-primary">
+                  <input class="invisible" type="checkbox" name="var_id[]" autocomplete="off" value="">
+                  <i class="material-icons">lock_outline</i>
+                  <h5>filtro#</h5>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="items col-md-3">
+            <div class="info-block block-info clearfix">
+              <div data-toggle="buttons" class="btn-group bizmoduleselect">
+                <label class="btn btn-outline-primary">
+                  <input class="invisible" type="checkbox"  name="var_id[]" autocomplete="off" value="">
+                  <i class="material-icons">verified_user</i>
+                  <h5>filtro#</h5>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="items col-md-3">
+            <div class="info-block block-info clearfix">
+              <div data-toggle="buttons" class="btn-group bizmoduleselect">
+                <label class="btn btn-outline-primary">
+                  <input class="invisible" type="checkbox" name="var_id[]" autocomplete="off" value="">
+                  <span class="fa fa-car fa-2x"></span>
+                  <h5>filtro#</h5>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="items col-md-3">
+            <div class="info-block block-info clearfix">
+              <div data-toggle="buttons" class="btn-group bizmoduleselect">
+                <label class="btn btn-outline-primary">
+                  <input class="invisible" type="checkbox" name="var_id[]" autocomplete="off" value="">
+                  <span class="fa fa-car fa-2x"></span>
+                  <h5>filtro#</h5>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <div class="form-group col-md-12">
       <div class="form-group col-md-12">
-          <label for="inlineConsulta"></label>
+        <label for="inlineConsulta"></label>
       </div>
       <div class="input-group mb-1 mr-sm-1">
-          <div class="input-group-prepend">
-              <div class="input-group-text"><i class="material-icons">search</i></div>
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="material-icons">search</i>
           </div>
-          <input type="text" class="form-control col-md-12" id="inlineConsulta" placeholder="Consulta de empressas">
-          </div>
+        </div>
+        <input type="text" class="form-control col-md-12" id="inlineConsulta" placeholder="Consulta de empressas">
+      </div>
+
+      
+   
     </div>
-    <br />
-    <div id="result"></div>
   </div>
 
-  <script src="jsConculta.js"></script>
-</body>
-</html>
+  <br />
+  <div id="result"></div>
 
+  <script src="jsConculta.js"></script>
+
+
+
+
+
+</body>
+
+</html>
